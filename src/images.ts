@@ -1,44 +1,29 @@
-export type Card = ImageButton | ItemsList | ImageGallery;
-
-export interface ImageButton {
-  text?: string;
-  url?: string;
-  payload?: unknown;
-}
+// see: https://vk.com/dev/marusia_skill_docs5
+export type Card = BigImage | ItemsList | MiniApp | Link;
 
 export interface BigImage {
   type: 'BigImage';
-  image_id: string;
-  title?: string;
-  description?: string;
-  button?: ImageButton;
+  image_id: number;
 }
 
 export interface ItemsList {
   type: 'ItemsList';
-  header?: {
-    text: string;
-  }
   items: ItemsListItem[];
-  footer?: {
-    text: string;
-    button?: ImageButton;
-  }
 }
 
 export interface ItemsListItem {
-  image_id: string;
-  title?: string;
-  description?: string;
-  button?: ImageButton;
+  image_id: number;
 }
 
-export interface ImageGallery {
-  type: 'ImageGallery';
-  items: ImageGalleryItem[];
+export interface MiniApp {
+  type: 'MiniApp';
+  url: string;
 }
 
-export interface ImageGalleryItem {
-  image_id: string;
-  title?: string;
+export interface Link {
+  type: 'Link';
+  url: string;
+  title: string;
+  text: string;
+  image_id: number;
 }

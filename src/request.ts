@@ -17,17 +17,14 @@ export interface Meta {
   client_id: string;
   interfaces: {
     screen?: Record<string, never>;
-    account_linking?: Record<string, never>;
-  }
+  },
+  _city_ru: string;
 }
 
 export interface Request {
   command: string;
   original_utterance: string;
   type: 'SimpleUtterance' | 'ButtonPressed';
-  markup?: {
-    dangerous_context?: true;
-  };
   payload?: unknown;
   nlu?: Nlu;
 }
@@ -36,15 +33,17 @@ export interface Session {
   message_id: number;
   session_id: string;
   skill_id: string;
+  /** @deprecated */
   user_id: string;
   user?: {
     user_id: string;
-    access_token: string;
   };
+  new: boolean;
   application: {
     application_id: string;
+    application_type: 'mobile' | 'speaker' | 'VK' | 'other';
   }
-  new: boolean;
+  auth_token: string;
 }
 
 export interface State {
