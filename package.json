@@ -1,0 +1,37 @@
+{
+  "name": "marusya-types",
+  "description": "Types for Mail.ru Marusya",
+  "version": "1.0.0",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "init": "git config core.hooksPath ./.hooks",
+    "lint": "eslint --ext .ts ./src",
+    "build": "rm -rf dist && tsc",
+    "release": "npm run lint && npm run build && npm version $VER && npm publish && git push --follow-tags --no-verify",
+    "release-patch": "VER=patch npm run release",
+    "release-minor": "VER=minor npm run release"
+  },
+  "lint-staged": {
+    "src/**/*.ts": "eslint --ext .ts"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.22.0",
+    "@typescript-eslint/parser": "^4.22.0",
+    "eslint": "^7.25.0",
+    "lint-staged": "^10.5.4",
+    "typescript": "^4.2.4"
+  },
+  "author": {
+    "name": "Vitaliy Potapov",
+    "email": "noginsk@rambler.ru"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/vitalets/alice-types.git"
+  },
+  "license": "MIT"
+}
