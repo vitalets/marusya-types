@@ -41,7 +41,7 @@ export interface Session {
   new: boolean;
   application: {
     application_id: string;
-    application_type: 'mobile' | 'speaker' | 'VK' | 'other';
+    application_type: 'mobile' | 'speaker' | 'vk' | 'other' | 'web';
   }
   auth_token: string;
 }
