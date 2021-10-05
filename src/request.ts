@@ -24,9 +24,9 @@ export interface Meta {
 export interface Request {
   command: string;
   original_utterance: string;
-  type: 'SimpleUtterance' | 'ButtonPressed';
-  payload?: unknown;
-  nlu?: Nlu;
+  type: 'SimpleUtterance' | 'ButtonPressed' | 'DeepLink';
+  payload?: Record<string, unknown>;
+  nlu?: Nlu | null;
 }
 
 export interface Session {
