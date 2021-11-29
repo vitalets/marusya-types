@@ -20,6 +20,7 @@ export interface Response {
   card?: Card;
   buttons?: Button[];
   end_session: boolean;
+  push?: Push;
   // todo: https://vk.com/dev/marusia_skill_docs11
   // audio_player
 }
@@ -28,4 +29,10 @@ export interface Button {
   title: string;
   url?: string;
   payload?: unknown;
+}
+
+// See: https://vk.com/dev/marusia_skill_docs16
+export interface Push {
+  push_text: string;
+  payload?: Record<string, unknown>;
 }
