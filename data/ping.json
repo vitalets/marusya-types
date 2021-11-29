@@ -1,0 +1,46 @@
+{
+  "meta": {
+    "client_id": "MailRu-VC/1.0",
+    "locale": "ru_RU",
+    "timezone": "Europe/Moscow",
+    "interfaces": {
+      "screen": {}
+    },
+    "_city_ru": "Москва",
+    "test": true
+  },
+  "request": {
+    "command": "Запусти скилл Голосовая открытка",
+    "original_utterance": "Запусти скилл Голосовая открытка",
+    "type": "SimpleUtterance",
+    "nlu": {
+      "tokens": [
+        "Запусти",
+        "скилл",
+        "Голосовая",
+        "открытка"
+      ],
+      "entities": []
+    }
+  },
+  "session": {
+    "session_id": "13c9be4f-4198-4c58-ad44-3641438f9637",
+    "user_id": "7efd01f895ff33a7b04c392767c737f82106525e9d75f35c627a38d5401beed4",
+    "skill_id": "990b5f5f-8cf5-4cde-9ee3-e571680f9048",
+    "new": true,
+    "message_id": 0,
+    "user": {
+      "user_id": "7efd01f895ff33a7b04c392767c737f82106525e9d75f35c627a38d5401beed4"
+    },
+    "application": {
+      "application_id": "7efd01f895ff33a7b04c392767c737f82106525e9d75f35c627a38d5401beed4",
+      "application_type": "other"
+    },
+    "auth_token": "e7c5d862c11e7a0c516a802cbb2f48fbf0e7461c1633729bd5b9091e2099f161"
+  },
+  "state": {
+    "session": {},
+    "user": {}
+  },
+  "version": "1.0"
+}

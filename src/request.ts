@@ -19,6 +19,7 @@ export interface Meta {
     screen?: Record<string, never>;
   },
   _city_ru: string;
+  test?: boolean;
 }
 
 export interface Request {
