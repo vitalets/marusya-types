@@ -1,7 +1,7 @@
 {
   "name": "marusya-types",
   "description": "Types for Mail.ru Marusya",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "types": "dist/index.d.ts",
   "files": [
     "dist",
