@@ -8,7 +8,6 @@
     "README.md"
   ],
   "scripts": {
-    "init": "git config core.hooksPath ./.hooks",
     "lint": "eslint --ext .ts ./src",
     "build": "rm -rf dist && tsc",
     "release": "npm run lint && npm run build && np --yolo --no-release-draft"
