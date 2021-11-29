@@ -21,6 +21,7 @@ export interface Response {
   buttons?: Button[];
   end_session: boolean;
   push?: Push;
+  commands?: Card[];
   // todo: https://vk.com/dev/marusia_skill_docs11
   // audio_player
 }
